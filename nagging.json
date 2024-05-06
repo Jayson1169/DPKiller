@@ -1,0 +1,56 @@
+{
+  "popup_ad": [
+    [
+      {"LOWER": {"IN": ["ad", "adchoices"]}}
+    ],
+    [
+      {"LOWER": {"IN": ["watch"]}},
+      {"IS_ALPHA": true, "OP": "?"},
+      {"LOWER": {"IN": ["ad", "session"]}},
+      {"LOWER": {"IN": ["to"]}},
+      {"LOWER": {"IN": ["unlock", "earn", "get", "collect", "gain", "access"]}, "OP": "?"}
+    ],
+    [
+      {"LOWER": {"IN": ["unlock", "earn", "get", "collect", "gain", "access"]}},
+      {"IS_ALPHA": true, "OP": "?"},
+      {"LOWER": {"IN": ["by"]}},
+      {"LEMMA": {"IN": ["watch"]}},
+      {"IS_ALPHA": true, "OP": "?"},
+      {"LOWER": {"IN": ["ad", "session"]}}
+    ],
+    [
+      {"LOWER": {"IN": ["install"]}},
+      {"LOWER": {"IN": ["now"]}, "OP": "?"}
+    ]
+  ],
+  "popup_rate": [
+    [
+      {"LEMMA": {"IN": ["rate", "upvote"]}},
+      {"LOWER": {"IN": ["this"]}, "OP": "?"},
+      {"LOWER": {"IN": ["us", "app", "now", "image", "picture", "video", "feature"]}},
+      {"LOWER": {"IN": ["now"]}, "OP": "?"}
+    ],
+    [
+      {"LEMMA": {"IN": ["give"]}},
+      {"LOWER": {"IN": ["this"]}, "OP": "?"},
+      {"LOWER": {"IN": ["us", "app", "it"]}},
+      {"LOWER": {"IN": ["five", "5"]}, "OP": "?"},
+      {"LEMMA": {"IN": ["star"]}},
+      {"LOWER": {"IN": ["rate", "review"]}}
+    ],
+    [
+      {"LEMMA": {"IN": ["star"]}},
+      {"LEMMA": {"IN": ["rate", "review"]}}
+    ],
+    [
+      {"LOWER": {"IN": ["do"]}},
+      {"LOWER": {"IN": ["you"]}},
+      {"LOWER": {"IN": ["like", "love"]}}
+    ]
+  ],
+  "popup_upgrade": [
+    [
+      {"LEMMA": {"IN": ["upgrade", "premium"]}}
+    ]
+  ]
+}
